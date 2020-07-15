@@ -17,6 +17,7 @@ class BaseField
     protected $help;
     protected $rules;
     protected $view;
+    protected $classes;
 
     public function __get($property)
     {
@@ -102,6 +103,11 @@ class BaseField
     public function view($view)
     {
         $this->view = $view;
+        return $this;
+    }
+
+    public function css($classes) {
+        $this->classes = $classes;
         return $this;
     }
 }
